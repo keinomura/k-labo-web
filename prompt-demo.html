@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カスタムプロンプトの効果 | K-Labo</title>
+  <meta name="description" content="同じ診察の会話から、プロンプト次第でSOAP記録・初診記録・要約など全く異なる診療録が生成されます。K-Laboのカスタムプロンプト機能のデモ。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- ===== Navigation ===== -->
+<header id="navbar" class="sticky top-0 z-50 bg-white transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-slate-900">
+        <span class="text-blue-600">🏥</span>
+        <span>K-Labo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html#features" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">機能</a>
+        <a href="howto.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">使い方</a>
+        <a href="prompt-demo.html" class="text-sm font-medium text-blue-600 border-b-2 border-blue-600 pb-0.5">実例</a>
+        <a href="index.html#pricing" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">料金</a>
+      </nav>
+      <a href="https://mrt.klabo.work/#/app" class="hidden md:inline-flex btn-primary text-sm px-5 py-2.5">
+        無料で始める
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="bg-slate-50 border-b border-slate-200 py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="text-sm text-slate-400 mb-6">
+      <a href="index.html" class="hover:text-blue-600 transition-colors">ホーム</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-600">カスタムプロンプトのデモ</span>
+    </nav>
+    <div class="max-w-3xl">
+      <span class="section-label">プロンプトデモ</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4">同じ会話。プロンプト次第で、<br>ここまで変わる。</h1>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        下の文字起こしは、実際の音声認識が出力する「話者区別なし・句読点なし」の生テキストです。<br>
+        これに対してプロンプトを変えるだけで、SOAP・初診記録・要約など、まったく異なる診療録が生成されます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Raw Transcript ===== -->
+<section class="py-12 lg:py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="flex items-center gap-3 mb-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold">
+        STEP 1
+      </div>
+      <h2 class="text-lg font-bold text-slate-900">音声認識の生テキスト（話者区別なし）</h2>
+    </div>
+    <p class="text-sm text-slate-500 mb-4">これが実際にアプリに入力される文字起こしです。句読点も話者ラベルもありません。</p>
+
+    <div class="bg-slate-900 rounded-2xl p-6 lg:p-8">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <span class="text-slate-500 text-xs ml-2">音声認識出力</span>
+      </div>
+      <p class="text-slate-300 text-sm leading-relaxed font-mono">
+        こんにちは初めてですねえっと今日はどうされましたか　はい最近頭が重くて肩もこりますそれで職場の健診で血圧が高いって言われてちゃんと診てもらおうと思って来ました　健診はいつ頃でしたか　先月です上が158下が96と言われました　それまで血圧を指摘されたことはありましたか　3年前の健診でも少し高めとは言われてたんですがそのままにしてました　今は何か薬を飲んでいますか　花粉症の薬だけです　ご家族に高血圧や心臓病の方はいらっしゃいますか　父が高血圧で脳梗塞をやっています　喫煙と飲酒はどうですか　タバコは吸いませんお酒はビールを毎日1缶か2缶くらいです　お仕事はどんなお仕事ですか　営業で外回りが多いですえー最近ストレスが多くて睡眠も浅い気がします　今日測った血圧は162の98でした心電図と血液検査をしましょう腎臓や心臓への影響がないか確認します今日はまず生活習慣の改善から始めて2週間後にまた来てください塩分は1日6グラム未満を目標にアルコールも少し減らせるといいですね　わかりました薬は出ますか　検査結果を見てからにしましょう今日はまだ出しません次回持参用に血圧手帳をお渡しします毎朝起きてすぐと夕食後に測って記録しておいてください
+      </p>
+    </div>
+
+    <!-- Arrow -->
+    <div class="flex flex-col items-center my-8 gap-1">
+      <div class="text-sm text-slate-500 font-semibold">プロンプトを選ぶだけで</div>
+      <svg class="w-6 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+
+    <div class="mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-semibold">
+          STEP 2
+        </div>
+        <h2 class="text-lg font-bold text-slate-900">プロンプトに応じた記事が生成される</h2>
+      </div>
+      <div class="bg-blue-50 border border-blue-100 rounded-xl px-5 py-4">
+        <p class="text-sm text-blue-800 leading-relaxed">
+          <span class="font-bold">プロンプトをカスタマイズすれば、あなたのクリニックが望む形式で記録できます。</span><br>
+          SOAP・箇条書き・要約・看護記録・引き継ぎメモ——どんな書き方でもプロンプト次第。<br>
+          <span class="text-blue-600 font-semibold">Standardプランで3個、Premiumプランで10個まで登録して切り替えられます。</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+
+      <!-- Tab buttons -->
+      <div class="flex border-b border-slate-200 bg-slate-50">
+        <button onclick="showTab('tab1')" id="btn-tab1"
+          class="tab-btn flex-1 py-3 px-4 text-sm font-semibold text-blue-600 border-b-2 border-blue-600 bg-white transition-colors">
+          初診患者用記録
+        </button>
+        <button onclick="showTab('tab2')" id="btn-tab2"
+          class="tab-btn flex-1 py-3 px-4 text-sm font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-700 transition-colors">
+          SOAP形式
+        </button>
+        <button onclick="showTab('tab3')" id="btn-tab3"
+          class="tab-btn flex-1 py-3 px-4 text-sm font-semibold text-slate-500 border-b-2 border-transparent hover:text-slate-700 transition-colors">
+          350文字要約
+        </button>
+      </div>
+
+      <!-- Tab 1: 初診患者用記録 -->
+      <div id="tab1" class="tab-content">
+        <div class="bg-amber-50 border-b border-amber-100 px-6 py-3">
+          <div class="text-xs font-bold text-amber-700 mb-1">使用プロンプト</div>
+          <p class="text-xs text-amber-800 font-mono leading-relaxed">初診患者の診療録として、主訴 / 現病歴 / 既往歴・家族歴 / 生活習慣 / 身体所見・検査 / 方針 を整理してください。</p>
+        </div>
+        <div class="p-6 lg:p-8 prose prose-slate max-w-none text-sm leading-relaxed">
+          <h3 class="text-base font-bold text-slate-900 mt-0 mb-2">主訴</h3>
+          <ul class="text-slate-700 mb-4 space-y-1">
+            <li>頭重感・肩こり（併せて健診で高血圧指摘あり）</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">現病歴</h3>
+          <ul class="text-slate-700 mb-4 space-y-1">
+            <li>近頃より「頭が重く、肩もこる」自覚あり。</li>
+            <li>職場の健診で血圧高値を指摘され、精査目的で来院。</li>
+            <li>健診は先月実施。血圧は <strong>上158／下96 mmHg</strong>。</li>
+            <li>それ以前にも3年前の健診で「少し高め」と言われていたが、放置していた。</li>
+            <li>本日来院時血圧：<strong>162／98 mmHg</strong>。</li>
+            <li>内服：現時点では花粉症の薬のみ（降圧薬は未使用）。</li>
+            <li>心電図・血液検査で腎臓/心臓などへの影響を確認する予定。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">既往歴・家族歴</h3>
+          <ul class="text-slate-700 mb-4 space-y-1">
+            <li>既往歴：花粉症あり（高血圧治療歴なし）。</li>
+            <li>家族歴：父が<strong>高血圧から脳梗塞</strong>。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">生活習慣</h3>
+          <ul class="text-slate-700 mb-4 space-y-1">
+            <li>喫煙：なし。</li>
+            <li>飲酒：ビールを毎日 <strong>1〜2缶</strong>。</li>
+            <li>職業：営業（外回りが多い）。</li>
+            <li>ストレス：最近多い。睡眠が浅い感じがある。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">身体所見・検査</h3>
+          <ul class="text-slate-700 mb-4 space-y-1">
+            <li>本日血圧：<strong>162／98 mmHg</strong>。</li>
+            <li>実施/予定検査：心電図、血液検査（腎臓・心臓への影響確認）。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">方針</h3>
+          <ul class="text-slate-700 mb-0 space-y-1">
+            <li>まずは生活習慣の改善を開始し、<strong>2週間後に再診</strong>。</li>
+            <li>食塩摂取：<strong>1日6g未満</strong>を目標。</li>
+            <li>アルコール：可能な範囲で減量。</li>
+            <li>血圧手帳を渡す：毎朝起床後すぐ・夕食後に測定して記録。</li>
+            <li>薬の開始：<strong>検査結果を見てから判断</strong>（本日処方なし）。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 2: SOAP -->
+      <div id="tab2" class="tab-content hidden">
+        <div class="bg-blue-50 border-b border-blue-100 px-6 py-3">
+          <div class="text-xs font-bold text-blue-700 mb-1">使用プロンプト</div>
+          <p class="text-xs text-blue-800 font-mono leading-relaxed">SOAP形式（Subjective / Objective / Assessment / Plan）で医師向けの診療録を作成してください。</p>
+        </div>
+        <div class="p-6 lg:p-8 text-sm leading-relaxed">
+
+          <h3 class="text-base font-bold text-slate-900 mt-0 mb-2">Subjective（主観的情報）</h3>
+          <ul class="text-slate-700 mb-5 space-y-1">
+            <li>初診。主訴：最近「頭が重い」「肩こり」あり。</li>
+            <li>健診で血圧高値を指摘され受診。先月：血圧 上158／下96。</li>
+            <li>3年前の健診でも高めと言われていたが放置。</li>
+            <li>現在内服：花粉症の薬のみ（降圧薬は未使用）。</li>
+            <li>家族歴：父が高血圧、脳梗塞あり。</li>
+            <li>喫煙なし。飲酒：ビールを毎日1〜2缶。</li>
+            <li>職業：営業職（外回り多い）。ストレス多く、睡眠が浅い。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">Objective（客観的情報）</h3>
+          <ul class="text-slate-700 mb-5 space-y-1">
+            <li>来院時血圧：<strong>162／98 mmHg</strong>。</li>
+            <li>心電図・血液検査を本日施行予定。</li>
+          </ul>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">Assessment（評価）</h3>
+          <ol class="text-slate-700 mb-5 space-y-2 list-decimal list-inside">
+            <li><strong>高血圧（未治療、初期評価段階）</strong>― 健診・本日実測ともに高値（収縮期160台／拡張期90台）。</li>
+            <li><strong>頭重感・肩こり</strong>― 高血圧との関連は否定できない。</li>
+            <li><strong>心血管リスク評価・臓器障害の有無確認が必要</strong>― 家族歴（脳梗塞）、飲酒習慣、ストレス・睡眠不良あり。</li>
+          </ol>
+
+          <h3 class="text-base font-bold text-slate-900 mb-2">Plan（計画）</h3>
+          <ol class="text-slate-700 mb-0 space-y-2 list-decimal list-inside">
+            <li><strong>検査実施：心電図＋血液検査</strong>（腎機能・臓器障害の有無を確認）。</li>
+            <li><strong>薬の開始は検査結果を見てから判断</strong>（本日処方なし）。</li>
+            <li><strong>生活指導：</strong>塩分1日6g未満、アルコール減量、睡眠・ストレス改善。</li>
+            <li><strong>家庭血圧測定：</strong>血圧手帳を渡す。毎朝起床後・夕食後に測定・記録。</li>
+            <li><strong>次回：2週間後再診</strong>― 検査結果と家庭血圧をもとに治療方針を決定。</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Tab 3: 350文字要約 -->
+      <div id="tab3" class="tab-content hidden">
+        <div class="bg-emerald-50 border-b border-emerald-100 px-6 py-3">
+          <div class="text-xs font-bold text-emerald-700 mb-1">使用プロンプト</div>
+          <p class="text-xs text-emerald-800 font-mono leading-relaxed">次回担当医が読む引き継ぎ用として、350文字以内で要約してください。重要な数値・家族歴・方針を含めること。</p>
+        </div>
+        <div class="p-6 lg:p-8">
+          <p class="text-slate-700 text-base leading-relaxed">
+            初診。主訴は頭が重く肩こり、職場健診で血圧高値を指摘（先月、158/96）。過去3年前も「少し高め」と言われ放置。内服は花粉症薬のみ。家族歴：父が高血圧で脳梗塞。喫煙なし、飲酒はビール毎日1〜2缶。職業は営業で外回り多く、最近ストレス多く睡眠が浅い。来院時血圧162/98。心電図・血液検査で腎臓/心臓への影響を確認予定。方針はまず生活習慣改善。塩分1日6g未満、飲酒軽減、2週間後再診し検査結果を見て薬は判断（本日は処方なし）。血圧手帳を渡し、毎朝起床直後と夕食後に記録する。
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <div class="text-xs text-slate-400">文字数：</div>
+            <div class="text-xs font-bold text-emerald-600">239文字（350文字以内）</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="bg-slate-900 py-16">
+  <div class="max-w-2xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold text-white mb-3">あなたのクリニックに合ったプロンプトで使う</h2>
+    <p class="text-slate-400 mb-8 leading-relaxed">プロンプトは自由に作成・保存できます。職種・診療科・用途ごとに切り替えて使えます。</p>
+    <a href="https://mrt.klabo.work/#/app" class="btn-primary text-base px-8 py-3 inline-flex">
+      無料で試してみる
+    </a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="bg-slate-900 border-t border-slate-800 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-slate-500 text-sm">© 2025 K-Labo. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.remove('text-blue-600', 'border-blue-600', 'bg-white');
+    btn.classList.add('text-slate-500', 'border-transparent');
+  });
+  document.getElementById(tabId).classList.remove('hidden');
+  const btn = document.getElementById('btn-' + tabId);
+  btn.classList.remove('text-slate-500', 'border-transparent');
+  btn.classList.add('text-blue-600', 'border-blue-600', 'bg-white');
+}
+</script>
+
+</body>
+</html>
