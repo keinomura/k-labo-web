@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Labo | AI診療録自動作成サービス</title>
+  <meta name="description" content="K-Laboは、音声から診療録を自動生成する医療機関向けSaaSサービスです。話すだけで約10秒で診療録が完成。QRコードで電子カルテに即連携。7日間無料トライアル。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- ===== Navigation ===== -->
+<header id="navbar" class="sticky top-0 z-50 bg-white transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 font-bold text-xl text-slate-900">
+        <span class="text-blue-600">🏥</span>
+        <span>K-Labo</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">機能</a>
+        <a href="howto.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">使い方</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">料金</a>
+        <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="https://mrt.klabo.work/#/app" class="hidden md:inline-flex btn-primary text-sm px-5 py-2.5">
+        無料で始める
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" aria-label="メニュー">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
+      <a href="#features" class="text-sm font-medium text-slate-700 hover:text-blue-600">機能</a>
+      <a href="howto.html" class="text-sm font-medium text-slate-700 hover:text-blue-600">使い方</a>
+      <a href="#pricing" class="text-sm font-medium text-slate-700 hover:text-blue-600">料金</a>
+      <a href="#faq" class="text-sm font-medium text-slate-700 hover:text-blue-600">FAQ</a>
+      <a href="https://mrt.klabo.work/#/app" class="btn-primary text-sm text-center">無料で始める</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="relative overflow-hidden" style="background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: text -->
+      <div class="fade-in">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-400/40 bg-blue-500/10 text-blue-300 text-sm font-medium mb-6">
+          👨‍⚕️ 現役医師が作った · 2026年5月サービス開始
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-4">
+          声で診る、<br>AIが書く。
+        </h1>
+
+        <!-- Sub-headline -->
+        <p class="text-xl sm:text-2xl font-semibold text-blue-200 mb-4 leading-snug">
+          約10秒で診療録完成。<br>話すだけで電子カルテへ。
+        </p>
+
+        <!-- Body -->
+        <p class="text-base text-slate-300 leading-relaxed mb-8 max-w-lg">
+          現役医師だからわかる、臨床で本当に必要なものを。<br>
+          医師・看護師・栄養士の記録業務を劇的に削減。<br>
+          ブラウザだけで、今日から使える。
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="https://mrt.klabo.work/#/app" class="btn-primary text-base">
+            7日間無料で試す
+          </a>
+          <a href="#howto" class="btn-outline text-base">
+            デモを見る
+          </a>
+        </div>
+
+        <!-- Trust -->
+        <p class="text-sm text-slate-400">
+          トライアルはクレジットカード不要 · 即日利用開始 · 7日間全機能無料
+        </p>
+      </div>
+
+      <!-- Right: iPad mockup -->
+      <div class="fade-in flex justify-center lg:justify-end">
+        <div class="device-frame w-full max-w-sm lg:max-w-md shadow-2xl shadow-blue-900/50">
+          <div class="device-screen">
+            <img src="picture/IMG_0090.PNG" alt="K-Laboアプリ 録音・文字起こし画面" class="w-full h-auto block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats Bar ===== -->
+<div class="bg-white border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="fade-in">
+        <div class="text-3xl font-extrabold text-blue-600 mb-1">90%削減</div>
+        <div class="text-sm text-slate-500">診療録作成時間</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl font-extrabold text-blue-600 mb-1">約10秒</div>
+        <div class="text-sm text-slate-500">処理時間</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl font-extrabold text-blue-600 mb-1">即日</div>
+        <div class="text-sm text-slate-500">導入までの時間</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl font-extrabold text-blue-600 mb-1">2026年5月</div>
+        <div class="text-sm text-slate-500">サービス開始</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Problem Section ===== -->
+<section id="problem" class="bg-slate-50 py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <span class="section-label">課題</span>
+      <h2 class="section-title mt-2">毎日の記録業務に、<br class="sm:hidden">疲れていませんか？</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="card fade-in">
+        <div class="text-4xl mb-4">🕐</div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">診療後に残る記録業務</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          1件5〜15分の手入力が診療後に積み重なる。外来が終わっても仕事は終わらない。
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card fade-in">
+        <div class="text-4xl mb-4">✏️</div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">転記ミスのリスク</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          音声→メモ→入力の多段階で発生する転記エラー。記憶の劣化と入力ミスが医療品質を脅かす。
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card fade-in">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">電子カルテへの入力が二度手間</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          記録を書いてから、また入力する二重作業。同じ情報を何度も打ち直す非効率な日常。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How It Works ===== -->
+<section id="howto" class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-in">
+      <span class="section-label">使い方</span>
+      <h2 class="section-title mt-2">3ステップで診療録が完成</h2>
+      <p class="section-subtitle max-w-xl mx-auto mt-4">
+        録音停止から約10秒で診療録を自動生成。QRコードで電子カルテに即連携。
+      </p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 fade-in">
+      <div>
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">1</div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-3">録音する</h3>
+        <p class="text-slate-600 leading-relaxed">
+          録音ボタンを押して話すだけ。診療中にリアルタイムで文字起こし。iPad + 外付けキーボードなら、たった2つのキーで全操作が手元で完結します。
+        </p>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <div class="device-frame w-full max-w-xs shadow-xl">
+          <div class="device-screen">
+            <img src="picture/IMG_0090.PNG" alt="録音・文字起こし画面" class="w-full h-auto block">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 fade-in">
+      <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+        <div class="device-frame w-full max-w-xs shadow-xl">
+          <div class="device-screen">
+            <img src="picture/IMG_0091.PNG" alt="AI診療録生成結果画面" class="w-full h-auto block">
+          </div>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">2</div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-3">AIが診療録を生成</h3>
+        <p class="text-slate-600 leading-relaxed">
+          話した内容をAIが要約・整理。前回の記録を複製して変化点だけ追記する、必要な情報だけ抜き出す、毎回SOAPで書き起こす——どの運用もプロンプト次第で対応。決まった形式を押し付けず、あなたのクリニックのやり方に合わせられます。
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center fade-in">
+      <div>
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">3</div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-3">QRコードで電子カルテへ</h3>
+        <p class="text-slate-600 leading-relaxed">
+          生成された診療録を即座にQRコード化。スキャンで入力完了。長文は自動分割に対応。メーカー問わず、QRコードリーダー対応の電子カルテに連携可能です。<br><span class="text-xs text-slate-400 mt-2 inline-block">※ 電子カルテ側にQRコードリーダーが必要です。</span>
+        </p>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <div class="device-frame w-full max-w-xs shadow-xl">
+          <div class="device-screen">
+            <img src="picture/IMG_0092.PNG" alt="QRコード連携画面" class="w-full h-auto block">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 fade-in">
+      <a href="howto.html" class="btn-primary inline-flex items-center gap-2 text-base px-8 py-3">
+        詳細な使い方ガイドを見る
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features Section ===== -->
+<section id="features" class="bg-slate-50 py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <span class="section-label">機能</span>
+      <h2 class="section-title mt-2">医療現場のために設計された機能</h2>
+    </div>
+
+    <!-- 6-feature grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">🎤</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">AI音声認識</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">AIによる高精度文字起こし。医療用語も正確に認識。</p>
+      </div>
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">📋</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">QRコード連携</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">電子カルテへワンスキャンで入力完了。手入力ゼロ。</p>
+      </div>
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">👥</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">職種別プロンプト</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">医師・看護師・栄養士・受付に最適化されたAIテンプレート。</p>
+      </div>
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">⏱️</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">45分説明モード</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">長時間の患者説明も録音・記録可能。オレンジUIで視覚的に区別。</p>
+      </div>
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">⌨️</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">2キーで操作完結</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">iPad + 外付けキーボードで、画面に触れずに録音〜QR表示まで手元で完結。衛生面への配慮も万全。</p>
+      </div>
+      <div class="card fade-in">
+        <div class="text-3xl mb-3">🏥</div>
+        <h3 class="text-base font-bold text-slate-900 mb-2">チーム管理</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">メンバー招待・権限管理・クリニックブランディング。クリニック最大6名。</p>
+      </div>
+    </div>
+
+    <!-- Prompt highlight block -->
+    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm fade-in">
+      <div class="grid lg:grid-cols-2 gap-0 items-center">
+        <div class="p-8 lg:p-12">
+          <span class="section-label">カスタマイズ</span>
+          <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">カスタマイズ可能なAIプロンプト</h3>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            クリニック独自のプロンプトを作成・管理。バージョン管理とロールバック機能で、安全に改善を繰り返せます。職種や診療科ごとに最適な出力形式を維持できます。
+          </p>
+          <p class="text-sm text-slate-500 mb-6">
+            より高度なカスタマイズ（出力形式の大幅変更・科目別テンプレート作成等）はご相談ください。
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://mrt.klabo.work/#/app" class="btn-primary">
+              詳しく見る
+            </a>
+            <a href="mailto:support@klabo.work?subject=カスタマイズのご相談" class="inline-flex items-center px-5 py-2.5 rounded-xl border-2 border-slate-300 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+              カスタマイズ相談
+            </a>
+          </div>
+        </div>
+        <div class="bg-slate-100 flex items-center justify-center p-6 lg:p-8">
+          <img src="picture/IMG_0093.PNG" alt="プロンプト選択・管理画面" class="w-full max-w-xs rounded-xl shadow-lg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Comparison Section ===== -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <h2 class="section-title">他のサービスとの違い</h2>
+      <p class="section-subtitle max-w-xl mx-auto">汎用ツールや既存の医療専用ツールとは、できることが根本的に異なります。</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- vs Generic -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 overflow-x-auto fade-in">
+        <h3 class="text-sm font-bold text-slate-700 mb-4">vs. 汎用音声入力（Otter.ai, Notta等）</h3>
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-slate-100">
+              <th class="text-left py-2.5 px-3 text-slate-500 font-medium">比較項目</th>
+              <th class="text-left py-2.5 px-3 text-slate-400 font-medium">汎用ツール</th>
+              <th class="text-left py-2.5 px-3 text-blue-600 font-bold">K-Labo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">医療用語認識</td>
+              <td class="py-2.5 px-3 text-slate-400">低精度</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ 高精度</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">診療録形式出力</td>
+              <td class="py-2.5 px-3 text-slate-400">❌</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ SOAP形式等</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">電子カルテ連携</td>
+              <td class="py-2.5 px-3 text-slate-400">❌</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ QRコード即時</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-medium text-slate-700">職種対応</td>
+              <td class="py-2.5 px-3 text-slate-400">❌</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ 4職種</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- vs Medical -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 overflow-x-auto fade-in">
+        <h3 class="text-sm font-bold text-slate-700 mb-4">vs. 医療専用ツール（AmiVoice等）</h3>
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-slate-100">
+              <th class="text-left py-2.5 px-3 text-slate-500 font-medium">比較項目</th>
+              <th class="text-left py-2.5 px-3 text-slate-400 font-medium">医療専用ツール</th>
+              <th class="text-left py-2.5 px-3 text-blue-600 font-bold">K-Labo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">初期コスト</td>
+              <td class="py-2.5 px-3 text-slate-400">数十万円〜</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ ¥0（無料トライアル）</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">導入期間</td>
+              <td class="py-2.5 px-3 text-slate-400">数週間〜</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ 即日</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-2.5 px-3 font-medium text-slate-700">出力</td>
+              <td class="py-2.5 px-3 text-slate-400">文字起こしのみ</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ AI診療録生成まで</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-medium text-slate-700">機器</td>
+              <td class="py-2.5 px-3 text-slate-400">専用ハード必要</td>
+              <td class="py-2.5 px-3 text-emerald-600 font-semibold">✅ ブラウザのみ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Devices Section ===== -->
+<section class="bg-slate-50 py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: iPhone screenshot -->
+      <div class="flex justify-center fade-in">
+        <div class="relative">
+          <!-- Phone frame -->
+          <div class="relative rounded-[3rem] overflow-hidden shadow-2xl" style="background:#1a1a1a; padding:14px;">
+            <div class="rounded-[2.5rem] overflow-hidden">
+              <img src="picture/IMG_3277.PNG" alt="K-Laboモバイル画面" class="w-full max-w-[260px] block">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: text -->
+      <div class="fade-in">
+        <span class="section-label">マルチデバイス</span>
+        <h2 class="section-title mt-2 mb-4">あらゆるデバイスで使える</h2>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          追加のアプリ不要。ブラウザだけで動作します。
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📱</span>
+            <div>
+              <div class="font-semibold text-slate-800 text-sm">iPad + キーボード</div>
+              <div class="text-xs text-slate-500">2キーで全操作が手元で完結</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📲</span>
+            <div>
+              <div class="font-semibold text-slate-800 text-sm">タブレット</div>
+              <div class="text-xs text-slate-500">外来・病棟回診に</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📱</span>
+            <div>
+              <div class="font-semibold text-slate-800 text-sm">スマートフォン</div>
+              <div class="text-xs text-slate-500">訪問診療・外出先に</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">💻</span>
+            <div>
+              <div class="font-semibold text-slate-800 text-sm">PC（Windows）</div>
+              <div class="text-xs text-slate-500">Windows電子カルテでの実績あり</div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-slate-400 leading-relaxed">
+          ※ 電子カルテとのQRコード連携は、Windowsでの実績があります。Macの電子カルテは現時点で非対応です（順次対応予定）。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing Section ===== -->
+<section id="pricing" class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <span class="section-label">料金</span>
+      <h2 class="section-title mt-2">シンプルな料金体系</h2>
+      <p class="section-subtitle max-w-xl mx-auto">
+        7日間の無料トライアルで、まずはお試しください。トライアルはクレジットカード不要。継続利用にはクレジットカードが必要です。
+      </p>
+    </div>
+
+    <!-- Plans grid -->
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+
+      <!-- Free Trial -->
+      <div class="pricing-card fade-in">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Free Trial</h3>
+        <p class="text-sm text-slate-500 mb-5">まずはお試し</p>
+        <div class="mb-1">
+          <span class="text-4xl font-extrabold text-slate-900">¥0</span>
+          <span class="text-slate-500 text-sm ml-1">/ 7日間</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-6">トライアル中はクレジットカード不要</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大1名</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>全機能利用可能</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>即日利用開始</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>トライアル中はクレジットカード不要</li>
+          <li class="check-item"><span class="text-slate-400 text-xs">継続利用にはクレジットカード必須</span></li>
+        </ul>
+        <a href="https://mrt.klabo.work/#/app" class="block text-center w-full py-3 rounded-xl border-2 border-blue-600 text-blue-600 font-semibold text-sm hover:bg-blue-50 transition-colors">
+          無料で始める
+        </a>
+      </div>
+
+      <!-- Personal Standard -->
+      <div class="pricing-card fade-in">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Personal Standard</h3>
+        <p class="text-sm text-slate-500 mb-5">個人の医療従事者向け</p>
+        <div class="mb-1">
+          <span class="text-4xl font-extrabold text-slate-900">¥2,980</span>
+          <span class="text-slate-500 text-sm ml-1">/ 月</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-6">税込</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大1名</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>通常録音 10分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>説明モード 30分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>プロンプト 3個</li>
+          <li class="check-item"><span class="text-slate-400">—</span><span class="text-slate-400">チーム管理</span></li>
+        </ul>
+        <a href="https://mrt.klabo.work/#/app" class="block text-center w-full py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+          申し込む
+        </a>
+      </div>
+
+      <!-- Personal Pro -->
+      <div class="pricing-card fade-in">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Personal Pro</h3>
+        <p class="text-sm text-slate-500 mb-5">長時間診療の専門医向け</p>
+        <div class="mb-1">
+          <span class="text-4xl font-extrabold text-slate-900">¥4,980</span>
+          <span class="text-slate-500 text-sm ml-1">/ 月</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-6">税込</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大1名</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>通常録音 15分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>説明モード 45分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>プロンプト 10個</li>
+          <li class="check-item"><span class="text-slate-400">—</span><span class="text-slate-400">チーム管理</span></li>
+        </ul>
+        <a href="https://mrt.klabo.work/#/app" class="block text-center w-full py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+          申し込む
+        </a>
+      </div>
+
+      <!-- Early Bird Premium — FEATURED -->
+      <div class="pricing-card featured fade-in relative">
+        <!-- Limited badge -->
+        <div class="absolute -top-3 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+          ★ 限定
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Early Bird Premium</h3>
+        <p class="text-sm text-slate-500 mb-5">早期導入者限定・2年間特別価格</p>
+        <div class="mb-1">
+          <span class="text-4xl font-extrabold text-blue-600">¥9,800</span>
+          <span class="text-slate-500 text-sm ml-1">/ 月</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-6">税込 · 2年間の特別価格</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大6名（うち医師最大2名）</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>Clinic Premiumと同一機能</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>通常録音 15分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>説明モード 45分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>プロンプト 10個</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>チーム管理・権限管理</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>クリニックブランディング</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>利用分析</li>
+        </ul>
+        <a href="mailto:support@klabo.work?subject=Early+Bird+Premium導入のご相談" class="block text-center w-full py-3 rounded-xl border-2 border-blue-500 text-blue-600 font-semibold text-sm hover:bg-blue-50 transition-colors">
+          お問い合わせ
+        </a>
+        <p class="text-xs text-slate-400 text-center mt-2">support@klabo.work までご連絡ください</p>
+      </div>
+
+      <!-- Clinic Premium -->
+      <div class="pricing-card fade-in">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Clinic Premium</h3>
+        <p class="text-sm text-slate-500 mb-5">クリニック向け（最大6名・医師最大2名）</p>
+        <div class="mb-1">
+          <span class="text-4xl font-extrabold text-slate-900">¥19,800</span>
+          <span class="text-slate-500 text-sm ml-1">/ 月</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-6">税込</p>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大6名（うち医師最大2名）</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>通常録音 15分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>説明モード 45分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>プロンプト 10個</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>チーム管理・権限管理</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>クリニックブランディング</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>利用分析</li>
+        </ul>
+        <a href="mailto:support@klabo.work?subject=Clinic+Premium導入のご相談" class="block text-center w-full py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+          お問い合わせ
+        </a>
+        <p class="text-xs text-slate-400 text-center mt-2">support@klabo.work までご連絡ください</p>
+      </div>
+
+      <!-- Hospital Premium -->
+      <div class="pricing-card fade-in">
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Hospital Premium</h3>
+        <p class="text-sm text-slate-500 mb-5">病院全体向け（最大20名）</p>
+        <div class="mb-6">
+          <p class="text-2xl font-bold text-slate-700">料金はお問い合わせください</p>
+        </div>
+        <ul class="space-y-3 mb-8 text-sm text-slate-600">
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>最大20名</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>通常録音 15分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>説明モード 45分/回</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>プロンプト 10個</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>チーム管理・権限管理</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>クリニックブランディング</li>
+          <li class="check-item"><span class="text-emerald-500 font-bold">✅</span>利用分析</li>
+        </ul>
+        <a href="mailto:support@klabo.work?subject=Hospital+Premium導入のご相談" class="block text-center w-full py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 transition-colors">
+          お問い合わせ
+        </a>
+        <p class="text-xs text-slate-400 text-center mt-2">support@klabo.work までご連絡ください</p>
+      </div>
+
+    </div>
+
+    <!-- Common features note -->
+    <p class="text-center text-sm text-slate-500 fade-in mb-4">
+      全プラン共通: AI診療録生成 / 高精度音声認識 / QRコード生成 / 5職種対応 / 自動アップデート
+    </p>
+    <p class="text-center text-xs text-slate-400 fade-in">
+      ※ 月額費用とは別に初期導入費用がかかります。詳細は <a href="mailto:support@klabo.work" class="underline hover:text-slate-600">support@klabo.work</a> までお問い合わせください。<br>
+      ※ 初期導入セットアップ（機器設定・スタッフ研修・プロンプト調整）のサポートはご相談ください。<br>
+      ※ 電子カルテとのQRコード連携には、電子カルテ側にQRコードリーダーが必要です。Windowsでの実績あり。Macの電子カルテは現時点で非対応。
+    </p>
+  </div>
+</section>
+
+<!-- ===== Security Section ===== -->
+<section class="bg-slate-50 py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <span class="section-label">セキュリティ</span>
+      <h2 class="section-title mt-2">医療情報を守る万全の体制</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">🔒</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">HTTPS/TLS暗号化</h3>
+          <p class="text-slate-500 text-xs">全通信を暗号化。傍受・改ざんを防止。</p>
+        </div>
+      </div>
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">🔑</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Clerk企業認証</h3>
+          <p class="text-slate-500 text-xs">企業グレードの認証基盤。安全なID管理。</p>
+        </div>
+      </div>
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">🛡️</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">PHI個人情報保護</h3>
+          <p class="text-slate-500 text-xs">患者個人情報はログから除外。PHI保護ポリシー準拠。</p>
+        </div>
+      </div>
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">👤</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">権限管理（RBAC）</h3>
+          <p class="text-slate-500 text-xs">役割ベースの5段階アクセス制御。最小権限の原則。</p>
+        </div>
+      </div>
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">💳</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Stripe PCI DSS</h3>
+          <p class="text-slate-500 text-xs">PCI DSS準拠の決済処理。カード情報は当社サーバーに保存しない。</p>
+        </div>
+      </div>
+      <div class="card fade-in flex items-start gap-4">
+        <span class="text-2xl">📋</span>
+        <div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1">操作ログ記録</h3>
+          <p class="text-slate-500 text-xs">全操作ログを記録。監査対応・インシデント追跡。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ Section ===== -->
+<section id="faq" class="bg-white py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 fade-in">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title mt-2">よくある質問</h2>
+    </div>
+
+    <div class="space-y-0 divide-y divide-slate-100 fade-in" id="faq-list">
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>専用の機器は必要ですか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          いいえ。インターネット接続と最新ブラウザ（Chrome推奨）があれば利用できます。専用のソフトウェアや機器のインストールは不要です。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>導入にどのくらい時間がかかりますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          アカウント作成後、即日利用開始できます。特別な設定やトレーニングは不要です。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>どの電子カルテに対応していますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          電子カルテ側にQRコードリーダーが備わっていれば連携可能です。<strong>WindowsのQRコードリーダー対応電子カルテでの実績があります。</strong> MacのQRコードリーダー対応電子カルテは現時点で非対応です（順次対応予定）。ご利用の電子カルテについては、お気軽にお問い合わせください。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>セットアップや使い方のサポートはありますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          はい、初期導入セットアップ（機器設定・スタッフ研修・プロンプト調整）のサポートをご用意しています。内容や費用はクリニックの規模や要件によって異なりますので、<a href="mailto:support@klabo.work" class="text-blue-600 hover:underline">support@klabo.work</a> までご相談ください。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>契約期間の縛りはありますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          ありません。月額制で、いつでも解約できます。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>Early Bird Premiumの価格はいつまで有効ですか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          早期導入者向けの2年間限定価格です。対象期間中にご契約いただいた方は、2年間月額¥9,800でご利用いただけます。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>録音データはどこに保存されますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          録音データは文字起こし処理のみに使用され、処理後は保存されません。生成された診療録テキストのみが保存されます。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>AIの精度はどのくらいですか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          高精度AIによる音声認識と、AIによる診療録生成を組み合わせています。クリニック独自のプロンプトで精度を継続的に向上できます。
+        </div>
+      </div>
+
+      <div class="faq-item py-5">
+        <button class="faq-question w-full text-left flex items-center justify-between gap-4 font-semibold text-slate-800 text-sm" aria-expanded="false">
+          <span>スタッフの追加に費用はかかりますか？</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="faq-answer hidden mt-3 text-slate-600 text-sm leading-relaxed">
+          プランの上限人数内であれば追加費用はかかりません。上限を超える場合は上位プランへの変更が必要です。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="py-20 lg:py-28" style="background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4 leading-tight">
+      今日から、記録業務を変えましょう。
+    </h2>
+    <p class="text-lg text-white/70 mb-8">
+      7日間無料トライアル。トライアルはクレジットカード不要。
+    </p>
+    <a href="https://mrt.klabo.work/#/app" class="btn-secondary text-base mb-6 inline-block">
+      無料で始める
+    </a>
+    <p class="text-sm text-white/50">
+      現役医師が開発 · 2026年5月サービス開始 · 日本語サポート対応
+    </p>
+  </div>
+</section>
+
+<!-- ===== Legal Sections ===== -->
+<div class="bg-slate-50 py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+
+    <!-- 特定商取引法 -->
+    <div id="tokushoho" class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <button class="legal-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-slate-800 text-sm hover:bg-slate-50 transition-colors" aria-expanded="false">
+        特定商取引法に基づく表記
+        <svg class="legal-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="legal-content hidden px-6 pb-6">
+        <table class="w-full text-sm text-slate-600 border-collapse">
+          <tbody>
+            <tr class="border-b border-slate-100">
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 w-40 align-top">事業者名</th>
+              <td class="py-3">K-Labo</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 align-top">運営責任者</th>
+              <td class="py-3">請求があった場合には遅滞なく開示</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 align-top">所在地</th>
+              <td class="py-3">請求があった場合には遅滞なく開示</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 align-top">連絡先</th>
+              <td class="py-3"><a href="mailto:support@klabo.work" class="text-blue-600 hover:underline">support@klabo.work</a></td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 align-top">支払方法</th>
+              <td class="py-3">クレジットカード（Stripe決済）</td>
+            </tr>
+            <tr>
+              <th class="text-left py-3 pr-6 font-medium text-slate-700 align-top">サービス提供時期</th>
+              <td class="py-3">契約成立後即時</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 利用規約 -->
+    <div id="terms" class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <button class="legal-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-slate-800 text-sm hover:bg-slate-50 transition-colors" aria-expanded="false">
+        利用規約
+        <svg class="legal-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="legal-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed space-y-4">
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">第1条（適用）</h3>
+          <p>本規約は、K-Labo（以下「当社」）が提供する医療記録作成SaaSサービス（以下「本サービス」）の利用条件を定めるものです。利用者は、本規約に同意の上、本サービスを利用するものとします。</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">第2条（利用登録）</h3>
+          <p>本サービスの利用を希望する者は、当社所定の方法により利用登録を行うものとします。当社は、利用登録の申込みを承諾しない場合があります。</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">第3条（禁止事項）</h3>
+          <p>利用者は、本サービスの利用にあたり、以下の行為を行ってはならないものとします。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>法令または公序良俗に違反する行為</li>
+            <li>犯罪行為に関連する行為</li>
+            <li>当社のサーバーまたはネットワークの機能を破壊・妨害する行為</li>
+            <li>当社のサービスの運営を妨害するおそれのある行為</li>
+            <li>他の利用者に関する個人情報等を収集・蓄積する行為</li>
+            <li>不正アクセスまたは不正アクセスを試みる行為</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">第4条（本サービスの提供の停止等）</h3>
+          <p>当社は、以下のいずれかの事由があると判断した場合、利用者に事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
+            <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
+            <li>コンピュータまたは通信回線等が事故により停止した場合</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">第5条（利用制限および登録抹消）</h3>
+          <p>当社は、利用者が以下のいずれかに該当する場合には、事前の通知なく、利用者に対して、本サービスの全部もしくは一部の利用を制限し、または利用者としての登録を抹消することができるものとします。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>本規約のいずれかの条項に違反した場合</li>
+            <li>登録事項に虚偽の事実があることが判明した場合</li>
+            <li>料金等の支払債務の不履行があった場合</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- プライバシーポリシー -->
+    <div id="privacy" class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <button class="legal-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-slate-800 text-sm hover:bg-slate-50 transition-colors" aria-expanded="false">
+        プライバシーポリシー
+        <svg class="legal-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="legal-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed space-y-4">
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">個人情報の収集</h3>
+          <p>当社は、本サービスの提供にあたり、以下の個人情報を収集します。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>氏名、メールアドレス、電話番号</li>
+            <li>医療機関名、部署、役職</li>
+            <li>決済情報（クレジットカード情報はStripeが管理）</li>
+            <li>サービス利用履歴</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">個人情報の利用目的</h3>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>本サービスの提供・運営のため</li>
+            <li>利用者からのお問い合わせに対応するため</li>
+            <li>利用規約に違反した利用者への対応のため</li>
+            <li>本サービスの改善・新サービス開発のため</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">個人情報の第三者提供</h3>
+          <p>当社は、以下の場合を除き、個人情報を第三者に提供しません。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>利用者の同意がある場合</li>
+            <li>法令に基づく場合</li>
+            <li>決済処理のためStripeに提供する場合</li>
+            <li>認証処理のためClerkに提供する場合</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">個人情報の安全管理</h3>
+          <p>当社は、個人情報の正確性および安全性確保のため、セキュリティ対策を実施し、個人情報への不正アクセス、紛失、破壊、改ざん、漏洩等を防止します。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 返金ポリシー -->
+    <div id="refund" class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <button class="legal-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-slate-800 text-sm hover:bg-slate-50 transition-colors" aria-expanded="false">
+        返金ポリシー
+        <svg class="legal-chevron w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <div class="legal-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed space-y-4">
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">月額サブスクリプションの解約</h3>
+          <p>月額サブスクリプションは、いつでも解約が可能です。解約は次回請求日の前日までに行ってください。解約手続き完了後、次回請求日以降の課金は発生しません。</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">日割り返金について</h3>
+          <p>月途中での解約の場合、日割り計算による返金は行いません。契約期間満了日までサービスをご利用いただけます。</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">返金が可能な場合</h3>
+          <p>以下の場合に限り、返金対応を行います。</p>
+          <ul class="list-disc list-inside mt-2 space-y-1 text-slate-500">
+            <li>サービス障害により、連続して7日間以上サービスが利用できなかった場合</li>
+            <li>当社の重大な過失により、サービスが正常に提供されなかった場合</li>
+            <li>二重請求等、当社の請求ミスがあった場合</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-800 mb-1">返金手続き</h3>
+          <p>返金を希望される場合は、<a href="mailto:support@klabo.work" class="text-blue-600 hover:underline">support@klabo.work</a> までご連絡ください。返金は、Stripeを通じて元のクレジットカードに返金されます（処理まで5〜10営業日）。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer style="background: #0F172A;" class="py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+
+      <!-- Logo + tagline -->
+      <div>
+        <div class="flex items-center gap-2 font-bold text-lg text-white mb-3">
+          <span class="text-blue-400">🏥</span>
+          K-Labo
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed">AI診療録自動作成サービス。<br>話すだけで約10秒で診療録が完成。</p>
+      </div>
+
+      <!-- サービス -->
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">サービス</h4>
+        <ul class="space-y-2">
+          <li><a href="#features" class="text-slate-400 text-sm hover:text-white transition-colors">機能紹介</a></li>
+          <li><a href="#howto" class="text-slate-400 text-sm hover:text-white transition-colors">使い方</a></li>
+          <li><a href="https://mrt.klabo.work/#/app" class="text-slate-400 text-sm hover:text-white transition-colors">アプリを開く</a></li>
+        </ul>
+      </div>
+
+      <!-- 料金・機能 -->
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">料金・機能</h4>
+        <ul class="space-y-2">
+          <li><a href="#pricing" class="text-slate-400 text-sm hover:text-white transition-colors">料金プラン</a></li>
+          <li><a href="#faq" class="text-slate-400 text-sm hover:text-white transition-colors">よくある質問</a></li>
+        </ul>
+      </div>
+
+      <!-- 法的情報 -->
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">法的情報 / お問い合わせ</h4>
+        <ul class="space-y-2">
+          <li><a href="#tokushoho" class="text-slate-400 text-sm hover:text-white transition-colors">特定商取引法に基づく表記</a></li>
+          <li><a href="#terms" class="text-slate-400 text-sm hover:text-white transition-colors">利用規約</a></li>
+          <li><a href="#privacy" class="text-slate-400 text-sm hover:text-white transition-colors">プライバシーポリシー</a></li>
+          <li><a href="#refund" class="text-slate-400 text-sm hover:text-white transition-colors">返金ポリシー</a></li>
+          <li><a href="mailto:support@klabo.work" class="text-slate-400 text-sm hover:text-white transition-colors">support@klabo.work</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
+      &copy; 2026 K-Labo.
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JavaScript ===== -->
+<script>
+(function () {
+  'use strict';
+
+  // 1. Scroll shadow on navbar
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add('shadow-md');
+    } else {
+      navbar.classList.remove('shadow-md');
+    }
+  }, { passive: true });
+
+  // 2. Mobile nav menu toggle
+  var menuBtn = document.getElementById('menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('icon-open');
+  var iconClose = document.getElementById('icon-close');
+
+  menuBtn.addEventListener('click', function () {
+    var isOpen = !mobileMenu.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    } else {
+      mobileMenu.classList.remove('hidden');
+      iconOpen.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    }
+  });
+
+  // Close mobile menu when a link is clicked
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  // 3. FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var answer = btn.nextElementSibling;
+      var chevron = btn.querySelector('.faq-chevron');
+      var isOpen = !answer.classList.contains('hidden');
+
+      if (isOpen) {
+        answer.classList.add('hidden');
+        chevron.style.transform = '';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        answer.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // 4. Legal sections toggle
+  document.querySelectorAll('.legal-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var content = btn.nextElementSibling;
+      var chevron = btn.querySelector('.legal-chevron');
+      var isOpen = !content.classList.contains('hidden');
+
+      if (isOpen) {
+        content.classList.add('hidden');
+        chevron.style.transform = '';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        content.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // 5. Fade-in animations via IntersectionObserver
+  var fadeEls = document.querySelectorAll('.fade-in');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: show all immediately
+    fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+}());
+</script>
+
+</body>
+</html>

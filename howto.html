@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使い方ガイド | K-Labo</title>
+  <meta name="description" content="K-Laboの使い方ガイド。スマートフォン・iPadのセットアップ方法から、アプリの操作方法まで図解で説明します。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<!-- ===== Navigation ===== -->
+<header id="navbar" class="sticky top-0 z-50 bg-white transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-slate-900">
+        <span class="text-blue-600">🏥</span>
+        <span>K-Labo</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html#features" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">機能</a>
+        <a href="#setup" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">セットアップ</a>
+        <a href="#app-guide" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">操作ガイド</a>
+        <a href="index.html#pricing" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">料金</a>
+      </nav>
+      <a href="https://mrt.klabo.work/#/app" class="hidden md:inline-flex btn-primary text-sm px-5 py-2.5">
+        無料で始める
+      </a>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" aria-label="メニュー">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
+      <a href="index.html#features" class="text-sm font-medium text-slate-700 hover:text-blue-600">機能</a>
+      <a href="#setup" class="text-sm font-medium text-slate-700 hover:text-blue-600">セットアップ</a>
+      <a href="#app-guide" class="text-sm font-medium text-slate-700 hover:text-blue-600">操作ガイド</a>
+      <a href="index.html#pricing" class="text-sm font-medium text-slate-700 hover:text-blue-600">料金</a>
+      <a href="https://mrt.klabo.work/#/app" class="btn-primary text-sm text-center">無料で始める</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Page Hero ===== -->
+<section class="bg-slate-50 border-b border-slate-200 py-12 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="text-sm text-slate-400 mb-6">
+      <a href="index.html" class="hover:text-blue-600 transition-colors">ホーム</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-600">使い方ガイド</span>
+    </nav>
+    <div class="max-w-2xl">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">使い方ガイド</h1>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        端末の置き場所・接続方法のセットアップから、アプリの操作方法まで。図解でわかりやすく説明します。
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a href="#setup" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors shadow-sm">
+        ① セットアップガイド
+      </a>
+      <a href="#app-guide" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-blue-400 hover:text-blue-600 transition-colors shadow-sm">
+        ② アプリ操作ガイド
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- PART 1: セットアップガイド                              -->
+<!-- ===================================================== -->
+<section id="setup" class="py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <span class="section-label">① セットアップガイド</span>
+      <h2 class="section-title mt-2">端末の準備と接続方法</h2>
+      <p class="section-subtitle max-w-xl mx-auto mt-4">
+        2つのスタイルから選べます。iPhoneは置くだけ、iPadは固定設置で2キー操作。
+      </p>
+    </div>
+
+    <!-- ======================== -->
+    <!-- A: iPhone               -->
+    <!-- ======================== -->
+    <div class="mb-20">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex items-center justify-center w-10 h-10 rounded-2xl bg-blue-600 text-white font-extrabold text-sm shrink-0">A</div>
+        <h3 class="text-2xl font-bold text-slate-900">iPhone（スマートフォン）で使う</h3>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+
+        <!-- A-1: 机上平置き -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mb-4">
+            最もシンプル
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-4">机の上に平置きするだけ</h4>
+
+          <div class="rounded-xl overflow-hidden mb-6">
+            <img src="picture/Gemini_Generated_Image_e8vj1he8vj1he8vj.png" alt="iPhoneの置き方（対面診療・横並び診療）" class="w-full">
+          </div>
+
+          <ol class="space-y-3 text-sm text-slate-600 mb-4">
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">1</span>
+              iPhoneのChromeでK-Laboを開き、ログインする
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">2</span>
+              医師と患者の間の机の上に、画面を上にして平置きする
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">3</span>
+              画面の録音ボタンをタップして録音開始。話し終えたら停止
+            </li>
+          </ol>
+          <p class="text-xs text-slate-400">追加機材ゼロ。今すぐ始められます。</p>
+        </div>
+
+        <!-- A-2: 遠隔マイク -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold mb-4">
+            音質向上オプション
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-4">遠隔マイクを置く</h4>
+
+          <div class="rounded-xl overflow-hidden mb-6">
+            <img src="picture/Gemini_Generated_Image_46fpqh46fpqh46fp.png" alt="マイクの置き方（対面診療・横並び診療）" class="w-full">
+          </div>
+
+          <ol class="space-y-3 text-sm text-slate-600 mb-4">
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">1</span>
+              Bluetooth対応の卓上マイクをiPhoneとペアリングする
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">2</span>
+              マイクを机の中央（医師・患者の間）に置く。iPhoneは机の端でOK
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">3</span>
+              iPhoneのK-Laboから録音開始。マイク入力が自動で使われる
+            </li>
+          </ol>
+          <p class="text-xs text-slate-400">広い診察室や複数人での診療に向いています。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- B: iPad 固定設置（推奨）  -->
+    <!-- ======================== -->
+    <div>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="flex items-center justify-center w-10 h-10 rounded-2xl bg-blue-600 text-white font-extrabold text-sm shrink-0">B</div>
+        <h3 class="text-2xl font-bold text-slate-900">iPad 固定設置（推奨）</h3>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div class="grid lg:grid-cols-2 gap-0 items-start">
+
+          <!-- 左：実物写真 -->
+          <div class="bg-slate-50 p-6 lg:p-8 flex flex-col gap-4">
+            <div class="rounded-xl overflow-hidden">
+              <img src="picture/7d419ffa-3b25-4bdb-9f4f-9368e88f2382.jpg" alt="iPad固定設置の実物（iPad・QRリーダー・USB-Cハブ・2キーボード）" class="w-full">
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              ※ QRリーダーはUSB接続で電子カルテのPCに繋ぎ、スキャン口をiPad画面に向けて固定します。iPadにQRコードが表示されると自動でスキャンされ、電子カルテに入力されます。
+            </p>
+          </div>
+
+          <!-- 右：セットアップ手順 -->
+          <div class="p-6 lg:p-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold mb-6">
+              推奨セットアップ
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2">スタンド ＋ Hub ＋ キーボード ＋ QRリーダー</h4>
+            <p class="text-sm text-slate-500 mb-6">外来診察室での固定設置。2キーだけで録音からカルテ入力まで完結します。</p>
+
+            <!-- 必要なもの -->
+            <div class="bg-slate-50 rounded-xl p-4 mb-6">
+              <div class="text-xs font-bold text-slate-700 mb-3">必要なもの</div>
+              <ul class="space-y-2 text-xs text-slate-600">
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>iPad（任意のモデル）</li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>iPadスタンド（卓上固定タイプ）</li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>USB-Cハブ（電源パススルー対応）</li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>キーボード（有線またはBluetooth）</li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>QRコードリーダー（USB接続）</li>
+                <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold mt-0.5">✅</span>電子カルテPC（Windows）</li>
+              </ul>
+            </div>
+
+            <!-- 接続手順 -->
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">1</span>
+                <div class="text-sm text-slate-600">
+                  <span class="font-semibold text-slate-800">iPadをスタンドに固定する</span><br>
+                  横向き（ランドスケープ）に設置。目の高さに調整する
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">2</span>
+                <div class="text-sm text-slate-600">
+                  <span class="font-semibold text-slate-800">USB-CハブをiPadに接続する</span><br>
+                  ハブのUSB-C端子をiPadに差し込む。ハブから電源アダプタを繋いで充電しながら使用
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">3</span>
+                <div class="text-sm text-slate-600">
+                  <span class="font-semibold text-slate-800">キーボードを接続する</span><br>
+                  有線の場合はハブのUSBポートへ。Bluetoothの場合はiPadとペアリング
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold mt-0.5">4</span>
+                <div class="text-sm text-slate-600">
+                  <span class="font-semibold text-slate-800">QRリーダーをiPad正面に向けて設置する</span><br>
+                  QRリーダーのUSBを電子カルテPCに接続。スキャン口をiPad画面に向けてスタンドで固定
+                </div>
+              </div>
+            </div>
+
+            <!-- 2キー操作 -->
+            <div class="bg-blue-50 rounded-xl p-4">
+              <div class="text-xs font-bold text-blue-700 mb-3">2キーで全操作が完結</div>
+              <div class="flex gap-4">
+                <div class="flex-1 text-center">
+                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg border-2 border-slate-400 bg-white font-bold text-slate-700 text-sm mb-1 shadow-sm">●</div>
+                  <div class="text-xs text-slate-700 font-semibold">録音・停止</div>
+                  <div class="text-xs text-slate-400 mt-0.5">開始 / 停止</div>
+                </div>
+                <div class="flex items-center text-slate-300 font-bold text-lg">+</div>
+                <div class="flex-1 text-center">
+                  <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg border-2 border-blue-400 bg-white font-bold text-blue-600 text-sm mb-1 shadow-sm">▣</div>
+                  <div class="text-xs text-slate-700 font-semibold">QR表示</div>
+                  <div class="text-xs text-slate-400 mt-0.5">QR自動スキャン</div>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 mt-3">QRキーを押すとiPad画面にQRコードが表示され、正面のQRリーダーが自動スキャン。電子カルテに即入力されます。</p>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4 text-xs text-amber-800">
+              <span class="font-bold">対応状況:</span> Windows電子カルテでの動作実績あり。Macの電子カルテは現時点で非対応です。
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mt-4 text-xs text-slate-600 leading-relaxed">
+              <p class="font-bold text-slate-700 mb-1">推奨構成についてのご注意</p>
+              <p>固定設置には推奨する機器構成があります。QRコードリーダーは機種によって読み取り精度や動作互換性が異なるため、動作確認済みの推奨モデルのご使用をお勧めします。推奨外の機器を独自にご用意された場合、正常に動作しないことがあります。その際のサポートは対応しかねますので、あらかじめご了承ください。推奨構成の詳細は<a href="mailto:support@klabo.work?subject=推奨構成のご確認" class="text-blue-600 hover:underline">お問い合わせ</a>ください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- PART 2: アプリ操作ガイド                               -->
+<!-- ===================================================== -->
+<section id="app-guide" class="bg-slate-50 py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <span class="section-label">② アプリ操作ガイド</span>
+      <h2 class="section-title mt-2">3ステップで診療録が完成</h2>
+      <p class="section-subtitle max-w-xl mx-auto mt-4">
+        セットアップが完了したら、あとは話すだけ。録音停止から約10秒で診療録が生成されます。
+      </p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+      <div class="grid lg:grid-cols-2 gap-0 items-center">
+        <div class="p-8 lg:p-10">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">1</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">録音する</h3>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            録音ボタン（またはキーボードの録音キー）を押して話すだけ。診察中にリアルタイムで文字起こしが行われます。終わったら停止ボタンを押してください。
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>通常モード：最大15分録音
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>説明モード（オレンジ表示）：最大45分録音
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>iPad＋キーボード：録音キー1つで開始・停止
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 flex items-center justify-center p-8 min-h-64">
+          <div class="device-frame w-full max-w-xs shadow-xl">
+            <div class="device-screen">
+              <img src="picture/IMG_0090.PNG" alt="録音・文字起こし画面" class="w-full h-auto block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+      <div class="grid lg:grid-cols-2 gap-0 items-center">
+        <div class="bg-slate-50 flex items-center justify-center p-8 min-h-64 order-2 lg:order-1">
+          <div class="device-frame w-full max-w-xs shadow-xl">
+            <div class="device-screen">
+              <img src="picture/IMG_0091.PNG" alt="AI診療録生成結果画面" class="w-full h-auto block">
+            </div>
+          </div>
+        </div>
+        <div class="p-8 lg:p-10 order-1 lg:order-2">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">2</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">AIが診療録を生成</h3>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            録音停止から約10秒でAIがその日の会話を要約・整理。前回の記録を複製して変化点だけ追記する、必要な情報だけ抜き出して挿入する、毎回SOAPで書き起こす——どの運用もプロンプト次第で対応できます。決まった形式を押し付けず、あなたのクリニックのやり方に合わせられるのがK-Laboの強みです。内容を確認して必要であれば修正できます。
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>生成後に編集・修正が可能
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>職種別プロンプトで出力形式を切り替え
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+      <div class="grid lg:grid-cols-2 gap-0 items-center">
+        <div class="p-8 lg:p-10">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600 text-white font-extrabold text-xl mb-6">3</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">QRコードで電子カルテへ</h3>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            診療録をQRコード化してかざすだけで、電子カルテへの入力が完了します。長文は自動的に分割されます。
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>iPad＋キーボード：QRキー1つでQRコード表示
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>長文は自動分割して連続スキャン対応
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>電子カルテのQRリーダーでスキャンして完了
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 flex items-center justify-center p-8 min-h-64">
+          <img src="picture/Gemini_Generated_Image_sob17lsob17lsob1.png" alt="QRコードリーダーでタブレット画面をスキャンする様子" class="w-full max-w-sm rounded-xl">
+        </div>
+      </div>
+    </div>
+
+    <!-- プロンプト切り替え -->
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div class="grid lg:grid-cols-2 gap-0 items-center">
+        <div class="bg-slate-50 flex items-center justify-center p-8 min-h-64 order-2 lg:order-1">
+          <img src="picture/IMG_0093.PNG" alt="プロンプト選択・管理画面" class="w-full max-w-xs rounded-xl shadow-lg">
+        </div>
+        <div class="p-8 lg:p-10 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold mb-6">
+            応用
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">プロンプトを切り替える</h3>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            録音前にプロンプトを選択することで、出力形式を職種・診療科・用途ごとに切り替えられます。クリニック独自のテンプレートも作成可能です。
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>医師・看護師・栄養士・受付など職種別
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>クリニック独自のテンプレートを登録可能
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="text-emerald-500 font-bold">✅</span>より高度なカスタマイズは<a href="mailto:support@klabo.work?subject=カスタマイズのご相談" class="text-blue-600 hover:underline">ご相談ください</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="py-16" style="background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+      まずは7日間、無料でお試しください。
+    </h2>
+    <p class="text-base text-white/70 mb-6">
+      クレジットカード不要。アカウント作成後すぐに使えます。
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://mrt.klabo.work/#/app" class="btn-secondary text-sm inline-block">
+        無料で始める
+      </a>
+      <a href="mailto:support@klabo.work?subject=導入のご相談" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-colors">
+        導入・セットアップ相談
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer style="background: #0F172A;" class="py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div>
+        <div class="flex items-center gap-2 font-bold text-lg text-white mb-3">
+          <span class="text-blue-400">🏥</span>
+          K-Labo
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed">AI診療録自動作成サービス。<br>話すだけで約10秒で診療録が完成。</p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">ガイド</h4>
+        <ul class="space-y-2">
+          <li><a href="#setup" class="text-slate-400 text-sm hover:text-white transition-colors">セットアップガイド</a></li>
+          <li><a href="#app-guide" class="text-slate-400 text-sm hover:text-white transition-colors">アプリ操作ガイド</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">サービス</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#features" class="text-slate-400 text-sm hover:text-white transition-colors">機能紹介</a></li>
+          <li><a href="index.html#pricing" class="text-slate-400 text-sm hover:text-white transition-colors">料金プラン</a></li>
+          <li><a href="index.html#faq" class="text-slate-400 text-sm hover:text-white transition-colors">よくある質問</a></li>
+          <li><a href="https://mrt.klabo.work/#/app" class="text-slate-400 text-sm hover:text-white transition-colors">アプリを開く</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white mb-4">お問い合わせ</h4>
+        <ul class="space-y-2">
+          <li><a href="mailto:support@klabo.work" class="text-slate-400 text-sm hover:text-white transition-colors">support@klabo.work</a></li>
+          <li><a href="mailto:support@klabo.work?subject=導入・セットアップのご相談" class="text-slate-400 text-sm hover:text-white transition-colors">導入・セットアップ相談</a></li>
+          <li><a href="index.html#tokushoho" class="text-slate-400 text-sm hover:text-white transition-colors">特定商取引法に基づく表記</a></li>
+          <li><a href="index.html#terms" class="text-slate-400 text-sm hover:text-white transition-colors">利用規約</a></li>
+          <li><a href="index.html#privacy" class="text-slate-400 text-sm hover:text-white transition-colors">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
+      &copy; 2026 K-Labo.
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JavaScript ===== -->
+<script>
+(function () {
+  'use strict';
+
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('shadow-md', window.scrollY > 50);
+  }, { passive: true });
+
+  var menuBtn = document.getElementById('menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var iconOpen = document.getElementById('icon-open');
+  var iconClose = document.getElementById('icon-close');
+
+  menuBtn.addEventListener('click', function () {
+    var isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    iconOpen.classList.toggle('hidden', !isOpen);
+    iconClose.classList.toggle('hidden', isOpen);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+}());
+</script>
+
+</body>
+</html>
